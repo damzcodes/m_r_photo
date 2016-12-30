@@ -1,0 +1,33 @@
+<style type="text/css">
+  .grid-sizer,
+  .grid-item { width: 25%; margin-bottom: 0}
+  /* 2 columns */
+  .grid-item--width2 { width: 50%; }
+  .grid-item--width3 { width: 75%; }
+</style>
+
+<div class="grid">
+  <div class="grid-sizer"></div>
+  <img class="grid-item" src="https://scontent-lht6-1.xx.fbcdn.net/v/t1.0-9/14522715_10153999504532916_1611553363976120845_n.jpg?oh=45640ec418b24fd5fbfdd4bb4fe28446&oe=58F27561">
+  <img class="grid-item grid-item--width3" src="https://scontent-lht6-1.xx.fbcdn.net/v/t1.0-9/14479690_10153999504472916_5107695976283278110_n.jpg?oh=9c5da41929f18bc268b5b2f6471bf5b5&oe=58E2D43B">
+  <img class="grid-item" src="https://scontent-lht6-1.xx.fbcdn.net/v/t1.0-9/14495498_10153999504412916_1203849182606889525_n.jpg?oh=37a9a20ee901860454fd583771ec6d8a&oe=58EDF4F7">
+  <img class="grid-item grid-item--width2" src="https://scontent-lht6-1.xx.fbcdn.net/v/l/t31.0-8/15259262_10154153023772916_361278855766674847_o.jpg?oh=0e8c9378880f1f863d25458c20b7d12c&oe=591E437A">
+  <img class="grid-item" src="https://scontent-lht6-1.xx.fbcdn.net/v/t1.0-9/14484915_10153999504212916_6451494741948842490_n.jpg?oh=2f274928f128b95273944c1ef17f3488&oe=58DBAAED">
+  <img class="grid-item grid-item--width2" src="https://scontent-lht6-1.xx.fbcdn.net/v/t1.0-9/14469720_10153999504147916_7761336165725561132_n.jpg?oh=b3770b422d86f943a401cbc0b48e6e46&oe=58DCE4DD">
+  <img class="grid-item" src="https://scontent-lht6-1.xx.fbcdn.net/v/t1.0-9/14522975_10153999504117916_3699707685753632546_n.jpg?oh=03f10f05fc9733a7cac1b380b07076bd&oe=591DCD42">
+  <img class="grid-item" src="https://scontent-lht6-1.xx.fbcdn.net/v/t1.0-9/14906939_10154082946237916_4750653054237693565_n.jpg?oh=99424dd839d2436f79abb04f273e4e6a&oe=58DE3F4A">
+  
+</div>
+
+
+<script type="text/javascript">
+  var $grid = $('.grid').imagesLoaded( function() {
+    // init Masonry after all images have loaded
+    $grid.masonry({
+      itemSelector: '.grid-item',
+      // use element for option
+      columnWidth: '.grid-sizer',
+      percentPosition: true
+    });
+  });
+</script>

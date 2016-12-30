@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>MRPhoto</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link rel="stylesheet" href="https://unpkg.com/tachyons@4.6.1/css/tachyons.min.css"/>
+    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+    <script src="https://npmcdn.com/imagesloaded@4.1/imagesloaded.pkgd.min.js"></script>
+  </head>
+
+  <body>
+    <header class="bg-white black-80 tc pv4 avenir">
+      <a href="/" class="dib pa3"> <img class="h5" src="https://s3.eu-west-2.amazonaws.com/missis.robinson/Logo/black.png"></a>
+      <nav class="bt tc mw7 center">
+        <a class="f6 f5-l link bg-animate black-80 hover-bg-light-pink dib pa3 ph4-l" href="/static_pages/about">About</a>
+        <a class="f6 f5-l link bg-animate black-80 hover-bg-light-green dib pa3 ph4-l" href="/static_pages/portfolio">Portfolio</a>
+        <a class="f6 f5-l link bg-animate black-80 hover-bg-light-yellow dib pa3 ph4-l" href="/static_pages/contact">Contact</a>
+      </nav>
+    </header>
+    <%= yield %>
+  </body>
+</html>
